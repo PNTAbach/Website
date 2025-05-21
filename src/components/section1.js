@@ -87,92 +87,125 @@ function Section1({ language,handleLanguageChange }) { // Receive language prop
 
   return (
     <div>
-        <div className="language-slider">
-          <span  className="flag-link" onClick={() => handleLanguageChange('da')}><img src={dkFlag} alt="Danish Flag"/></span>
-          <span className="flag-link" onClick={() => handleLanguageChange('en')}><img src={ukFlag} alt="UK Flag"/></span>
-        </div>
-        <div>
-      
-              {renderSpotLight && (
-                <div className="spotlight-animation" style={{ position: 'absolute', top: '0px', left: '-55px' }}>
-                  <SpotLight/>
-                </div>
-              )}
-              {renderSpotLight2 && (
-                <div className="spotlight-animation" style={{ position: 'absolute', top: '0px', right: '-55px' }}>
-                  <SpotLight4 />
-                </div>
-              )}
-              {renderSpotLight3 && (
-                <div className="spotlight-animation" style={{ position: 'absolute', top: '0px', left: '-55px' }}>
-                  <SpotLight5  />
-                </div>
-              )}
-              {renderSpotLight4 && (
-                <div className="spotlight-animation" style={{ position: 'absolute', top: '0px', right: '-55px' }}>
-                  <SpotLight2 />
-                </div> 
-              )}
-              {renderSpotLight5 && (
-                <div className="spotlight-animation" style={{ position: 'absolute', top: '0px', left: '-55px' }}>
-                  <SpotLight3 />
-                </div>
-              )}
-              {renderSpotLight6 && (
-                <div className="spotlight-animation" style={{ position: 'absolute', top: '0px', right: '-55px' }}>
-                  <SpotLight6 />
-                </div>
-              )}
-        </div>
-        <div className="section d-flex align-items-center justify-content-center">
-          <Modal show={show} onHide={handleClose} className="custom-modal">
-            <Modal.Header closeButton>
-              <Modal.Title>App soon available!</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>{texts.modalBody[language]}</Modal.Body> 
-            <Modal.Footer>
-              <Button variant="danger" onClick={handleClose}>
-                {texts.closeButton[language]} 
-              </Button>
-            </Modal.Footer>
-          </Modal>
-          <div className="row w-100">
-            <div
-              ref={leftColumnRef}
-              className="col-md-6 d-flex align-items-center justify-content-center"
-            >
-              <div className="w-90 h-100 d-flex align-items-center justify-content-center">
-                <div className="text-center w-50  pt-3">
-                  <p className="title">{texts.title[language]}</p> 
-                  <p className="subtitle w-100">
-                    {texts.subtitle[language]} 
-                  </p>
-                  <div className="d-flex justify-content-end">
-                    <button className="funny-btn fwb" onMouseEnter={handleHover}
-                      onMouseLeave={handleHover} onClick={handleShow}>{texts.getAppComponent[language]}</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              ref={rightColumnRef}
-              className="col-md-6 d-flex align-items-center justify-content-center overflow-hidden"
-            >
-              <div className="w-90 h-50 position-relative">
-                <div className="text-center w-75">
-                  <img
-                    src={partyImage}
-                    alt="Party"
-                    className="phone-image"
+      <div className="language-slider">
+        <span className="flag-link" onClick={() => handleLanguageChange("da")}>
+          <img src={dkFlag} alt="Danish Flag" />
+        </span>
+        <span className="flag-link" onClick={() => handleLanguageChange("en")}>
+          <img src={ukFlag} alt="UK Flag" />
+        </span>
+      </div>
+      <div>
+        {renderSpotLight && (
+          <div
+            className="spotlight-animation"
+            style={{ position: "absolute", top: "0px", left: "-55px" }}
+          >
+            <SpotLight />
+          </div>
+        )}
+        {renderSpotLight2 && (
+          <div
+            className="spotlight-animation"
+            style={{ position: "absolute", top: "0px", right: "-55px" }}
+          >
+            <SpotLight4 />
+          </div>
+        )}
+        {renderSpotLight3 && (
+          <div
+            className="spotlight-animation"
+            style={{ position: "absolute", top: "0px", left: "-55px" }}
+          >
+            <SpotLight5 />
+          </div>
+        )}
+        {renderSpotLight4 && (
+          <div
+            className="spotlight-animation"
+            style={{ position: "absolute", top: "0px", right: "-55px" }}
+          >
+            <SpotLight2 />
+          </div>
+        )}
+        {renderSpotLight5 && (
+          <div
+            className="spotlight-animation"
+            style={{ position: "absolute", top: "0px", left: "-55px" }}
+          >
+            <SpotLight3 />
+          </div>
+        )}
+        {renderSpotLight6 && (
+          <div
+            className="spotlight-animation"
+            style={{ position: "absolute", top: "0px", right: "-55px" }}
+          >
+            <SpotLight6 />
+          </div>
+        )}
+      </div>
+      <div className="section d-flex align-items-center justify-content-center">
+        <Modal show={show} onHide={handleClose} className="custom-modal">
+          <Modal.Header closeButton>
+            <Modal.Title>App soon available!</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>{texts.modalBody[language]}</Modal.Body>
+          <Modal.Footer>
+            <Button variant="danger" onClick={handleClose}>
+              {texts.closeButton[language]}
+            </Button>
+          </Modal.Footer>
+        </Modal>
+        <div className="row w-100">
+          <div
+            ref={leftColumnRef}
+            className="col-md-6 d-flex align-items-center justify-content-center"
+          >
+            <div className="w-90 h-100 d-flex align-items-center justify-content-center">
+              <div className="text-center w-50  pt-3">
+                <p className="title">{texts.title[language]}</p>
+                <p className="subtitle w-100">{texts.subtitle[language]}</p>
+                <div className="d-flex justify-content-end gap-2">
+                  <a
+                    href="https://github.com/PNTAbach/PNTAapp"
+                    className="funny-btn fwb"
                     onMouseEnter={handleHover}
                     onMouseLeave={handleHover}
-                    onClick={handleShow}
-                  />
+                  >
+                    {texts.getAppComponent[language]}
+                  </a>
+                  <a
+                    href="https://venuewebapp.vercel.app/login"
+                    className="funny-btn fwb"
+                    onMouseEnter={handleHover}
+                    onMouseLeave={handleHover}
+                  >
+                    {texts.getManagerAppComponent[language]}
+                  </a>
                 </div>
               </div>
             </div>
           </div>
+          <div
+            ref={rightColumnRef}
+            className="col-md-6 d-flex align-items-center justify-content-center overflow-hidden"
+          >
+            <div className="w-90 h-50 position-relative">
+              <div className="text-center w-75">
+                <img
+                  src={partyImage}
+                  alt="Party"
+                  className="phone-image"
+                  onMouseEnter={handleHover}
+                  onMouseLeave={handleHover}
+                  onClick={handleShow}
+                />
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
   );
 }

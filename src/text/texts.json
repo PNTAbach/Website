@@ -20,8 +20,12 @@
       "da": "Luk"
     },
     "getAppComponent": {
-      "en": "Get App",
-      "da": "Hent app"
+      "en": "Get Mobile App",
+      "da": "Hent Mobil App"
+    },
+    "getManagerAppComponent": {
+      "en": "Manager App",
+      "da": "Manager App"
     },
     "section2Title": {
       "en": "heat!",

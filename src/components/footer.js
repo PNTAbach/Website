@@ -6,7 +6,7 @@ function Footer({language}) {
   return (
     <footer className="footer mt-auto py-3 custom-color">
       <div className="container text-center">
-        <span className="ftext">&copy; 2024 {texts.footerText[language]}</span>
+        <span className="ftext">&copy; 2025 {texts.footerText[language]}</span>
       </div>
     </footer>
   );

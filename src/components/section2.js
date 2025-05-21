@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/section2.css';
 import partyImage from '../images/phone2.png';
-import texts from '../text/texts.json'; // Import JSON file
+import texts from '../text/texts.json'; 
 
 function Section2({ language }) { 
   return (
